@@ -44,7 +44,7 @@ body {
 
 .calculator {
     max-width: 500px;
-    margin: 5vh auto;
+    margin: auto;
     border-radius: 10px;
     background-color: var(--display-bg);
 }
@@ -131,7 +131,7 @@ button:active {
 
 .header {
     position: relative;
-    height: 50px;
+    height: 75px;
 }
 
 .header p {
