@@ -13,8 +13,7 @@ function hideText(box) {
 }
 
 // Calculator
-numpad.addEventListener('click', (evnet) => {
-    const input = event.target.value;
+function calculator(input) {
     if (input in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
         if (equation.slice(-1) === '=') {
             hideText(displayTop);
@@ -64,6 +63,10 @@ numpad.addEventListener('click', (evnet) => {
     } else if (input === 'D') {
         if (display.slice(-1) === '%') {
             equation = equation.slice(0, -4);
+        } else if (equation.slice(-1) === '=') {
+            equation = result.toString();
+            display = result.toString();
+            equation = equation.slice(0, -1);
         } else {
             equation = equation.slice(0, -1);
         }
@@ -74,5 +77,25 @@ numpad.addEventListener('click', (evnet) => {
         display = '';
         hideText(displayBottom);
         hideText(displayTop);
+    }
+}
+
+// Input by click
+numpad.addEventListener('click', event => {
+    const input = event.target.value;
+    calculator(input);
+})
+
+// Input by keyboard
+document.addEventListener('keydown', event => {
+    const input = event.key;
+    if (input in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,]) {
+        calculator(input);
+    } else if (input === '+' || input === '-' || input === '*' || input === '/' || input === '%' || input === '.' || input === '=') {
+        calculator(input);
+    } else if (input === 'Backspace' || input === 'Delete') {
+        calculator('D');
+    } else if (input === 'Enter') {
+        calculator('=');
     }
 })
