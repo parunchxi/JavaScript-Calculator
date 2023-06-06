@@ -99,3 +99,14 @@ document.addEventListener('keydown', event => {
         calculator('=');
     }
 })
+
+// Change Theme
+const changeTheme = document.getElementById('change_theme');
+changeTheme.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.className === 'dark-mode') {
+        changeTheme.innerHTML = '<i class="ri-moon-fill"></i>';
+    } else {
+        changeTheme.innerHTML = '<i class="ri-sun-fill"></i>';
+    }
+})

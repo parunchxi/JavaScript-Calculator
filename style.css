@@ -7,27 +7,46 @@
 
 :root {
     --primary-color: #FF8A65;
-    --primary-color-darker: #FF7043;
-    --black: #263238;
-    --light-black: #607D8B;
-    --gray: #B0BEC5;
-    --gray-75: #b0bec575;
-    --gray-50: #b0bec550;
-    --light-gray: #CFD8DC;
-    --light-gray-50: #CFD8DC50;
-    --white: #ECEFF1;
+    --secondary-color: #FF7043;
+    --bg: #F5F7F8;
+    --display-bg: #DBE2E5;
+    --numpad-bg: #ECEFF1;
+    --primary-text-color: #263238;
+    --secondary-text-color: #607D8B;
+    --button-color: #E7EBED;
+    --button-color-hover: #CFD8DC;
+    --operation-button-color: #DBE2E5;
+    --operation-button-color-hover: #C4CED4;
+}
+
+.dark-mode {
+    --primary-color: #D95F39;
+    --secondary-color: #FF7043;
+    --bg: #13191C;
+    --display-bg: #1C252A;
+    --numpad-bg: #263238;
+    --primary-text-color: #ECEFF1;
+    --secondary-text-color: #90A4AE;
+    --button-color: #29353B;
+    --button-color-hover: #37474F;
+    --operation-button-color: #3E515A;
+    --operation-button-color-hover: #455A64;
 }
 
 ::selection {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--bg);
+}
+
+body {
+    background-color: var(--bg);
 }
 
 .calculator {
     max-width: 500px;
     margin: 5vh auto;
     border-radius: 10px;
-    background-color: var(--gray-75);
+    background-color: var(--display-bg);
 }
 
 .display {
@@ -36,10 +55,10 @@
 }
 
 .display-text {
-    width: 460px;
+    width: 470px;
     position: absolute;
     text-align: end;
-    right: 20px;
+    right: 15px;
     bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -54,12 +73,12 @@
 
 .display-text p.big {
     font-size: 4rem;
-    color: var(--black);
+    color: var(--primary-text-color);
 }
 
 .display-text p.small {
     font-size: 2rem;
-    color: var(--light-black);
+    color: var(--secondary-text-color);
 }
 
 .numpad {
@@ -69,7 +88,7 @@
     grid-template: repeat(5, 1fr) / repeat(4, 1fr);
     grid-gap: 10px;
     border-radius: 10px;
-    background-color: var(--white);
+    background-color: var(--numpad-bg);
 }
 
 .zero {
@@ -77,16 +96,17 @@
 }
 
 button {
-    color: var(--black);
+    color: var(--primary-text-color);
     font-size: 2rem;
-    background-color: var(--light-gray-50);
+    background-color: var(--button-color);
     border: none;
     border-radius: 10px;
+    cursor: pointer;
     user-select: none;
 }
 
 button:hover {
-    background-color: var(--light-gray);
+    background-color: var(--button-color-hover);
 }
 
 button:active {
@@ -94,11 +114,11 @@ button:active {
 }
 
 .operation {
-    background-color: var(--gray-50);
+    background-color: var(--operation-button-color);
 }
 
 .operation:hover {
-    background-color: var(--gray);
+    background-color: var(--operation-button-color-hover);
 }
 
 .equal {
@@ -106,5 +126,26 @@ button:active {
 }
 
 .equal:hover {
-    background-color: var(--primary-color-darker);
+    background-color: var(--secondary-color);
+}
+
+.header {
+    position: relative;
+    height: 50px;
+}
+
+.header p {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#change_theme {
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--primary-text-color);
+}
+
+#change_theme:hover {
+    color: var(--secondary-text-color);
 }
