@@ -6,10 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
+                <div class="display-text">
+                    <p id="top" class="small">top</span>
+                    <p id="bottom" class="big">bottom</span>
+                </div>
+            </div>
+            <div class="numpad">
+                <button value="C" class="clear operation">C</button>
+                <button value="%" class="percent operation">%</button>
+                <button value="D" class="delete operation"><i class="ri-delete-back-2-fill"></i></button>
+                <button value="/" class="division operation">÷</button>
+                <button value="7" class="seven">7</button>
+                <button value="8" class="eight">8</button>
+                <button value="9" class="nine">9</button>
+                <button value="*" class="multiplication operation">×</button>
+                <button value="4" class="four">4</button>
+                <button value="5" class="five">5</button>
+                <button value="6" class="six">6</button>
+                <button value="-" class="minus operation">-</button>
+                <button value="1" class="one">1</button>
+                <button value="2" class="two">2</button>
+                <button value="3" class="three">3</button>
+                <button value="+" class="plus operation">+</button>
+                <button value="0" class="zero">0</button>
+                <button value="." class="dot">.</button>
+                <button value="=" class="equal">=</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
