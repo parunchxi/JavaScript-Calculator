@@ -25,7 +25,7 @@
 
 .calculator {
     max-width: 500px;
-    margin: 3% auto;
+    margin: 5vh auto;
     border-radius: 10px;
     background-color: var(--gray-75);
 }
@@ -44,11 +44,12 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 .display-text::-webkit-scrollbar {
     display: none;
+    height: 10px;
 }
 
 .display-text p.big {

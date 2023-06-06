@@ -29,8 +29,8 @@ function calculator(input) {
             equation = equation.slice(0, -1);
             display = display.slice(0, -1);
         } else if (equation.slice(-1) === '=') {
-            equation = result;
-            display = result;
+            equation = result.toString();
+            display = result.toString();
         }
         equation += input;
         if (input === '+' || input === '-') {
@@ -47,8 +47,8 @@ function calculator(input) {
         showText(displayBottom, display);
     } else if (input === '%') {
         if (equation.slice(-1) === '=') {
-            equation = result;
-            display = result;
+            equation = result.toString();
+            display = result.toString();
         }
         equation += '/100';
         display += input;
