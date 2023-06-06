@@ -36,6 +36,7 @@
 }
 
 .display-text {
+    width: 460px;
     position: absolute;
     text-align: end;
     right: 20px;
@@ -43,6 +44,11 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    overflow-x: scroll;
+}
+
+.display-text::-webkit-scrollbar {
+    display: none;
 }
 
 .display-text p.big {
