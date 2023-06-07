@@ -55,10 +55,15 @@ function calculator(input) {
         showText(displayBottom, display);
     } else if (input === '=') {
         if (equation !== '') {
-            result = eval(equation);
+            try {
+                result = eval(equation);
+                showText(displayTop, display);
+            }
+            catch (err) {
+                result = 'Syntax Error';
+            }
             equation += input;
             showText(displayBottom, result);
-            showText(displayTop, display);
         }
     } else if (input === 'D') {
         if (display.slice(-1) === '%') {
