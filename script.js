@@ -86,6 +86,11 @@ numpad.addEventListener('click', event => {
     calculator(input);
 })
 
+const deleteIcon = document.getElementById('delete_icon')
+deleteIcon.addEventListener('click', () => {
+    calculator('D');
+})
+
 // Input by keyboard
 document.addEventListener('keydown', event => {
     const input = event.key;
