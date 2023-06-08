@@ -42,6 +42,41 @@ body {
     background-color: var(--bg);
 }
 
+/* Navbar */
+nav {
+    height: 85px;
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    align-self: center;
+}
+
+nav .link-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav .link-group a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 3rem;
+    color: var(--primary-text-color);
+}
+
+nav .link-group a:hover {
+    color: var(--secondary-text-color);
+    transition: color .3s;
+}
+
+/* Main */
 .calculator {
     max-width: 500px;
     margin: auto;
@@ -127,36 +162,4 @@ button:active {
 
 .equal:hover {
     background-color: var(--secondary-color);
-}
-
-nav {
-    height: 75px;
-    padding: 20px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-nav h1 {
-    font-size: 2rem;
-    color: var(--primary-text-color);
-    align-self: center;
-}
-
-nav .link-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-nav .link-group a {
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 2rem;
-    color: var(--primary-text-color);
-}
-
-nav .link-group a:hover {
-    color: var(--secondary-text-color);
 }
