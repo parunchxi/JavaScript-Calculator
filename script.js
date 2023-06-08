@@ -141,3 +141,16 @@ if (theme === 'darkMode') {
 } else {
     setLightMode();
 }
+
+// Detect Theme
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setDarkMode();
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    if (event.matches) {
+        setDarkMode();
+    } else {
+        setLightMode();
+    }
+});
